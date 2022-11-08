@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #34495e;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  overflow: hidden;
+}
+h1 {
+  margin: 2rem 0 1rem;
+}
+.game-container {
+  padding: 2rem 3rem;
+  position: relative;
+  margin: auto;
+  height: 35rem;
+   width: 45rem;
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+.figure-part {
+  display: none;
+}
+.wrong-letters-container{
+   position: absolute;
+   top: 2rem;
+   right: 2rem;
+   display: flex;
+   flex-direction: column;
+   align-items: right;
+}
+.wrong-letters-container p{
+   margin: 0 0 0.5rem;
+}
+.wrong-letters-container span{
+    font-size: 2.4rem;
+}
+.word{
+   display: flex;
+   position: absolute;
+   left: 50%;
+   bottom: 1rem;
+   transform: translateX(-50%);
+}
+.letter{
+   border-bottom: 3px solid #2980b9;
+   font-size: 3rem;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 3px;
+   height: 5rem;
+   width: 2rem;
+}
+.popup-containr{
+   background-color: rgba(0, 0, 0, 0.3);
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   display: flex;
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+.popup{
+   background: #2980b9;
+   border-radius: 0.5rem;
+   box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.2);
+   padding: 2rem;
+   text-align: center;
+}
+.popup button{
+   background-color: #fff;
+   border: 2px solid #2980b9;
+   border: 0;
+   color: #2980b9;
+   cursor: pointer;
+   margin-top: 2rem;
+   padding: 1rem 2rem;
+   font-size: 1.6rem;
+}
+.popup button:active{
+   transform: scale(0.98);
+}
+.popup button:focus{
+   outline: none;
+}
+.notification-container{
+   background-color: rgba(0, 0, 0, 0.3);
+   border-radius: 1rem 1rem 0 0;
+   padding: 1.5rem 2rem;
+   position: absolute;
+   bottom: -5rem;
+   transition: transform 0.3s ease-in-out;
+}
+.notification-container.show{
+   transform: translateY(-5rem);
+}
